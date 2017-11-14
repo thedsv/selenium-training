@@ -17,16 +17,11 @@ public class LitecartProductsTests extends TestBase {
     driver.navigate().to("http://localhost/litecart/public_html/en/");
     wait.until(titleIs("Online Store | My Store"));
 
-    List<WebElement> products = driver.findElements(By.xpath("//div[@id='box-logotypes']/following-sibling::div//li"));
+    List<WebElement> products = driver.findElements(By.cssSelector(".product"));
 
     for (WebElement product : products) {
-      List<WebElement> productStickers = product.findElements(By.xpath(".//div[@class='image-wrapper']/div"));
-      if (productStickers.size() == 1) {
-        String productStickerText = productStickers.get(0).getText();
-        Assert.assertTrue("Текст стикера отличен от: NEW, SALE", productStickerText.equals("NEW") || productStickerText.equals("SALE"));
-      } else {
-        Assert.assertTrue("Количество стикеров не равно 1", false);
-      }
+      List<WebElement> productStickers = product.findElements(By.cssSelector(".sticker"));
+      Assert.assertTrue("Количество стикеров не равно 1", productStickers.size() == 1);
     }
   }
 }
