@@ -12,7 +12,6 @@ public class LitecartProductsExtendedTests extends TestBase {
   private final String grayColorRegExp = "#(.)\\1+";
   private final String redColorRegExp = "#[^0]00";
 
-
   @Test
   public void litecartProductsTest() {
     driver.navigate().to("http://localhost/litecart/public_html/en/");
@@ -58,7 +57,8 @@ public class LitecartProductsExtendedTests extends TestBase {
   }
 
   private boolean fontIsStrikethrough(WebElement textElement) {
-    return textElement.getCssValue("text-decoration-line").equals("line-through");
+    return textElement.getCssValue("text-decoration-line").equals("line-through")
+            || textElement.getCssValue("text-decoration").equals("line-through"); //IE supporting
   }
 
   private boolean fontIsRedColored(WebElement textElement) {
