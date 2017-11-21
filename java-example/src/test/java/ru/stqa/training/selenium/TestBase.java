@@ -25,8 +25,8 @@ public class TestBase {
     }
     DesiredCapabilities caps = new DesiredCapabilities();
     caps.setCapability(FirefoxDriver.MARIONETTE, false);
-//    driver = new FirefoxDriver(caps);
-    driver = new InternetExplorerDriver(caps);
+    driver = new FirefoxDriver(caps);
+//    driver = new InternetExplorerDriver(caps);
 //    driver = new ChromeDriver(caps);
     tlDriver.set(driver);
     System.out.println(((HasCapabilities) driver).getCapabilities());
