@@ -1,13 +1,14 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Litecart.MainPage;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ru.stqa.training.selenium.TestBase;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class LitecartProductsExtendedTests extends TestBase {
+public class ProductsExtendedTests extends TestBase {
 
   private final String grayColorRegExp = "#(.)\\1+";
   private final String redColorRegExp = "#[^0]00";

@@ -1,12 +1,13 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Litecart.MainPage;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import ru.stqa.training.selenium.TestBase;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class LitecartAccountCreationTests extends TestBase {
+public class AccountCreationTests extends TestBase {
 
   private final String unique = System.currentTimeMillis() + "";
   private final String email = uniqueValue("email") + "@email.com";

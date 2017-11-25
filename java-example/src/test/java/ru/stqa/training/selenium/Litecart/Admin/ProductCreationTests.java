@@ -1,15 +1,16 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Litecart.Admin;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ru.stqa.training.selenium.TestBase;
 
 import java.io.File;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class LitecartProductCreationTests extends TestBase {
+public class ProductCreationTests extends TestBase {
 
   private String unique = System.currentTimeMillis() + "";
   private final String name = "Duck_" + unique;
